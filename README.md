@@ -31,6 +31,30 @@ command-line
     'n0pzyy'
     'n0yy'
     'n0zpyy'
+    sqlite> .read headstock/pegbox.sql
+    sqlite> .schema pegbox
+    CREATE TABLE pegbox(signa VARCHAR(10),
+      Cn INT, Ck INT, Dn INT, Ej INT, En INT, Fn INT,
+      Fk INT, Gn INT, Aj INT, An INT, Bj INT, Bn INT);
+    sqlite> .read headstock/beadgcf.sql
+    'n0-beadgcf-i1663211254'
+    'wq __ us __ su __ qw vr __ tt __ rv '
+    'vr __ tt __ rv wq __ us __ su __ qw '
+    'us __ su __ qw vr __ tt __ rv wq __ '
+    'tt __ rv wq __ us __ su __ qw vr __ '
+    'su __ qw vr __ tt __ rv wq __ us __ '
+    'rv wq __ us __ su __ qw vr __ tt __ '
+    'qw vr __ tt __ rv wq __ us __ su __ '
+    sqlite> update pegbox set signa='j3';
+    sqlite> .read headstock/beadgcf.sql
+    'j3-beadgcf-i1663211279'
+    'ws __ uu __ sw __ qx vt __ tv xq __ '
+    'vt __ tv xq __ ws __ uu __ sw __ qx '
+    'uu __ sw __ qx vt __ tv xq __ ws __ '
+    'tv xq __ ws __ uu __ sw __ qx vt __ '
+    'sw __ qx vt __ tv xq __ ws __ uu __ '
+    '__ ws __ uu __ sw __ qx vt __ tv xq '
+    'qx vt __ tv xq __ ws __ uu __ sw __ '
     sqlite> .quit
     user@multivac2:~/tredecuplex$
 
