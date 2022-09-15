@@ -16,7 +16,7 @@ command-line
     user@multivac2:~/tredecuplex$ sqlite3
     SQLite version 3.31.1
     Connected to a transient in-memory database.
-    sqlite> .read forge_gamut.sql
+    sqlite> .read sql/gamut.sql
     sqlite> .tables
     gamut
     sqlite> .schema gamut
@@ -31,12 +31,12 @@ command-line
     'n0pzyy'
     'n0yy'
     'n0zpyy'
-    sqlite> .read headstock/pegbox.sql
+    sqlite> .read sql/pegbox.sql
     sqlite> .schema pegbox
     CREATE TABLE pegbox(signa VARCHAR(10),
       Cn INT, Ck INT, Dn INT, Ej INT, En INT, Fn INT,
       Fk INT, Gn INT, Aj INT, An INT, Bj INT, Bn INT);
-    sqlite> .read headstock/beadgcf.sql
+    sqlite> .read sql/beadgcf.sql
     'n0-beadgcf-i1663211254'
     'wq __ us __ su __ qw vr __ tt __ rv '
     'vr __ tt __ rv wq __ us __ su __ qw '
@@ -46,7 +46,7 @@ command-line
     'rv wq __ us __ su __ qw vr __ tt __ '
     'qw vr __ tt __ rv wq __ us __ su __ '
     sqlite> update pegbox set signa='j3';
-    sqlite> .read headstock/beadgcf.sql
+    sqlite> .read sql/beadgcf.sql
     'j3-beadgcf-i1663211279'
     'ws __ uu __ sw __ qx vt __ tv xq __ '
     'vt __ tv xq __ ws __ uu __ sw __ qx '
