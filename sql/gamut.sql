@@ -1,4 +1,4 @@
--- forge_gamut.sql
+-- gamut.sql
 
 DROP TABLE IF EXISTS gamut;
 CREATE TABLE gamut(signa VARCHAR(10), scale VARCHAR(40));
