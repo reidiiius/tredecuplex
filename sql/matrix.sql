@@ -11,14 +11,14 @@ SELECT
 SELECT
   printf("%s%s",
     substr(scale, (SELECT Aj FROM pegbox)),
-    TRIM(substr(scale, 0, (SELECT Aj FROM pegbox)+2))
+    substr(scale, 0, (SELECT Aj FROM pegbox)+2)
   ) FROM gamut WHERE signa = (SELECT signa FROM pegbox);
 
 -- Ej
 SELECT
   printf("%s%s",
     substr(scale, (SELECT Ej FROM pegbox)),
-    TRIM(substr(scale, 0, (SELECT Ej FROM pegbox)+2))
+    substr(scale, 0, (SELECT Ej FROM pegbox)+2)
   ) FROM gamut WHERE signa = (SELECT signa FROM pegbox);
 
 -- Bj
@@ -95,6 +95,6 @@ SELECT
 SELECT
   printf("%s%s",
     substr(scale, (SELECT Aj FROM pegbox)),
-    TRIM(substr(scale, 0, (SELECT Aj FROM pegbox)+2))
+    substr(scale, 0, (SELECT Aj FROM pegbox)+2)
   ) FROM gamut WHERE signa = (SELECT signa FROM pegbox);
 
