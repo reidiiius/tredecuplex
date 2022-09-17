@@ -14,8 +14,9 @@ command-line
 
     user@multivac2:~$ cd tredecuplex/
     user@multivac2:~/tredecuplex$ sqlite3 -init sql/gamut.sql
+    -- Loading resources from sql/gamut.sql
     SQLite version 3.31.1
-    Connected to a transient in-memory database.
+    Enter ".help" for usage hints.
     sqlite> .tables
     gamut
     sqlite> .schema gamut
