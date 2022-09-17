@@ -1,25 +1,32 @@
 -- matrix.sql
 
 SELECT
-  CASE TRUE WHEN (
-    SELECT (
-      SELECT signa FROM gamut WHERE signa IS (
+  CASE TRUE
+    WHEN (
+      SELECT signa FROM pegbox
+    ) IS ''
+    THEN (
+      SELECT 'signa attribute of pegbox is empty'
+    )
+    WHEN (
+      SELECT (
         SELECT signa FROM pegbox
-      )
-    ) ISNULL
-  )
-  THEN (
-    printf("%s %s",(
-      SELECT signa FROM pegbox), CHAR(63) /* 63 3F ? */
-    )
-  )
-  ELSE (
-    UPPER(
-      printf("%s-13x13-i%s",(
-        SELECT signa FROM pegbox), strftime("%sz", 'now', 'utc')
+      ) NOT IN (
+        SELECT signa FROM gamut
       )
     )
-  )
+    THEN (
+      printf("%s ?", (
+        SELECT signa FROM pegbox)
+      )
+    )
+    ELSE (
+      UPPER(
+        printf("%s-13x13-i%s", (
+          SELECT signa FROM pegbox), strftime("%sz", 'now', 'utc')
+        )
+      )
+    )
   END;
 
 -- Aj
