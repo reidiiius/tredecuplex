@@ -15,7 +15,7 @@ command-line
     user@multivac2:~$ cd tredecuplex/
     user@multivac2:~/tredecuplex$ sqlite3 -init sql/gamut.sql
     -- Loading resources from sql/gamut.sql
-    SQLite version 3.31.1
+    SQLite version 3.31.1 2020-01-27 19:55:54
     Enter ".help" for usage hints.
     sqlite> .tables
     gamut
@@ -42,7 +42,7 @@ command-line
       Cn INT, Ck INT, Dn INT, Ej INT, En INT, Fn INT,
       Fk INT, Gn INT, Aj INT, An INT, Bj INT, Bn INT);
     sqlite> .read sql/beadgcf.sql
-    'n0-beadgcf-i1663211254'
+    'N0-BEADGCF-I1663463436-H1A160F'
     'wq __ us __ su __ qw vr __ tt __ rv '
     'vr __ tt __ rv wq __ us __ su __ qw '
     'us __ su __ qw vr __ tt __ rv wq __ '
@@ -52,7 +52,7 @@ command-line
     'qw vr __ tt __ rv wq __ us __ su __ '
     sqlite> update pegbox set signa='j3';
     sqlite> .read sql/beadgcf.sql
-    'j3-beadgcf-i1663211279'
+    'J3-BEADGCF-I1663463485-HF6A630'
     'ws __ uu __ sw __ qx vt __ tv xq __ '
     'vt __ tv xq __ ws __ uu __ sw __ qx '
     'uu __ sw __ qx vt __ tv xq __ ws __ '
@@ -60,6 +60,13 @@ command-line
     'sw __ qx vt __ tv xq __ ws __ uu __ '
     '__ ws __ uu __ sw __ qx vt __ tv xq '
     'qx vt __ tv xq __ ws __ uu __ sw __ '
+    sqlite> .read sql/cgdae.sql
+    'J3-CGDAE-I1663463519-H3E86D2C3'
+    '__ ws __ uu __ sw __ qx vt __ tv xq '
+    'sw __ qx vt __ tv xq __ ws __ uu __ '
+    'tv xq __ ws __ uu __ sw __ qx vt __ '
+    'uu __ sw __ qx vt __ tv xq __ ws __ '
+    'vt __ tv xq __ ws __ uu __ sw __ qx '
     sqlite> .quit
     user@multivac2:~/tredecuplex$
 

@@ -9,11 +9,9 @@ SELECT
       SELECT 'signa attribute of pegbox is empty'
     )
     WHEN (
-      SELECT (
-        SELECT signa FROM pegbox
-      ) NOT IN (
-        SELECT signa FROM gamut
-      )
+      SELECT signa FROM pegbox
+    ) NOT IN (
+      SELECT signa FROM gamut
     )
     THEN (
       printf("%s ?", (
@@ -22,8 +20,10 @@ SELECT
     )
     ELSE (
       UPPER(
-        printf("%s-13x13-i%s", (
-          SELECT signa FROM pegbox), strftime("%sz", 'now', 'utc')
+        printf("%s-mx13-i%u-h%s", (
+          SELECT signa FROM pegbox),
+            strftime("%s", 'now', 'utc'),
+            hex(randomblob(6))
         )
       )
     )

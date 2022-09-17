@@ -1,9 +1,33 @@
 -- eadgbe.sql
 
 SELECT
-  printf("%s-eadgbe-i%s",(
-    SELECT signa FROM pegbox), strftime("%s")
-  );
+  CASE TRUE
+    WHEN (
+      SELECT signa FROM pegbox
+    ) IS ''
+    THEN (
+      SELECT 'signa attribute of pegbox is empty'
+    )
+    WHEN (
+      SELECT signa FROM pegbox
+    ) NOT IN (
+      SELECT signa FROM gamut
+    )
+    THEN (
+      printf("%s ?", (
+        SELECT signa FROM pegbox)
+      )
+    )
+    ELSE (
+      UPPER(
+        printf("%s-eadgbe-i%u-h%s", (
+          SELECT signa FROM pegbox),
+            strftime("%s", 'now', 'utc'),
+            hex(randomblob(3))
+        )
+      )
+    )
+  END;
 
 -- En
 SELECT
