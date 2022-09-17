@@ -1,4 +1,4 @@
-# Tredecuplex
+# TredecupleX
 Amalgam Lyra
 
 ---
@@ -13,10 +13,9 @@ Amalgam Lyra
 command-line
 
     user@multivac2:~$ cd tredecuplex/
-    user@multivac2:~/tredecuplex$ sqlite3
+    user@multivac2:~/tredecuplex$ sqlite3 -init sql/gamut.sql
     SQLite version 3.31.1
     Connected to a transient in-memory database.
-    sqlite> .read sql/gamut.sql
     sqlite> .tables
     gamut
     sqlite> .schema gamut
@@ -27,11 +26,16 @@ command-line
     sqlite> select * from gamut where signa like '_26';
     'j26','vv zq __ __ ry wu __ uw yr __ __ qz '
     'k26','vp __ __ pv rq wo __ uy __ __ ow qr '
-    sqlite> select signa from gamut where scale like '%yy%';
+    sqlite> select signa from gamut where scale like '%tt%';
+    'n0pz'
     'n0pzyy'
+    'n0'
     'n0yy'
+    'n0zp'
     'n0zpyy'
     sqlite> .read sql/pegbox.sql
+    sqlite> .tables
+    gamut   pegbox
     sqlite> .schema pegbox
     CREATE TABLE pegbox(signa VARCHAR(10),
       Cn INT, Ck INT, Dn INT, Ej INT, En INT, Fn INT,
